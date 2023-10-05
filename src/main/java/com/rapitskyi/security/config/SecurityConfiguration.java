@@ -23,7 +23,7 @@ public class SecurityConfiguration {
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.ALWAYS))
 
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("/", "/signUp", "/signIn", "/logout","/login").permitAll()
+                        .requestMatchers("/", "/signUp", "/signIn", "/logout").permitAll()
                         .anyRequest().authenticated())
 
                 .formLogin(c->c.loginPage("/login").permitAll()
